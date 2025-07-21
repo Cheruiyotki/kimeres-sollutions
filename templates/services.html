@@ -1,0 +1,169 @@
+{% extends "base.html" %}
+
+{% block title %}Our Services | WeFixTech Solutions{% endblock %}
+
+{% block content %}
+<!-- New Introductory Section -->
+<section class="intro-section" style="background-color: #f8f9fa; padding: 3rem 0; margin-bottom: 3rem;">
+    <div class="container">
+        <h1 style="text-align: center; color: #03624c; margin-bottom: 1.5rem;">Your Trusted Tech Repair Experts in Nairobi and Mombasa</h1>
+        
+        <div style="max-width: 800px; margin: 0 auto; padding: 0 1rem;">
+            <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                When your phone breaks, laptop starts to have issues, when your Mac suddenly stops working as it was when new, 
+                when your gaming console decides to break down or when you lose your valued data - whom do you turn to for help?
+            </p>
+            
+            <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                You probably went online and looked for 'mobile phone repair in Nairobi and Mombasa' or maybe you searched for 
+                'mobile phone repair shop near me', 'Laptop repair near me', 'Gaming console repair near me', or in case you lost data 
+                'Data recovery experts Nairobi and Mombasa' - or maybe a friend recommended the best mobile phone repair service in 
+                Nairobi and Mombasa to you. <strong>That's us!</strong>
+            </p>
+            
+            <p style="font-size: 1.1rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                It doesn't matter how you landed up on our website. You're here now and you're in the right place.
+            </p>
+            
+            <p style="font-size: 1.1rem; line-height: 1.6;  ">
+               Kimeres solutions is the best Phone repair, Laptop repair, Tablet repair, gaming console repair and data recovery experts service 
+                center in Nairobi and Mombasa equipped with the best technology and team to help you with any Phone, Laptop, Tablet, 
+                and gaming console repair in Nairobi and Mombasa.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="section">
+    <div class="section-title">
+        <h2>Our Comprehensive Services</h2>
+        <p>Expert solutions for all your tech needs</p>
+    </div>
+
+    <div class="services-grid">
+        <!-- Device Repairs -->
+        <div class="service-card">
+             <div class="slide-img" style="background-image: url(../static/images/background.webp);"></div>
+            <h3>1. Device Repairs</h3>
+            <ul>
+                <li>Smartphone repair (screen, battery, charging ports, water damage)</li>
+                <li>Tablet/iPad repair</li>
+                <li>Laptop/PC repair (hardware & software issues)</li>
+                <li>Smartwatch and wearable repair</li>
+                <li>Game console repair</li>
+            </ul>
+            <a href="{{ url_for('booking') }}" class="btn">Book Repair</a>
+        </div>
+        
+        <!-- Computer Services -->
+        <div class="service-card">
+          <div class="slide-img" style="background-image: url(../static/images/computer-services.jpg);"></div>
+            <h3>2. Computer Services</h3>
+            <ul>
+                <li>Software installation and troubleshooting</li>
+                <li>Virus and malware removal</li>
+                <li>Operating system installation/upgrade (Windows, Linux, macOS)</li>
+                <li>Data recovery and backup solutions</li>
+                <li>Laptop cleaning and thermal paste replacement</li>
+            </ul>
+            <a href="{{ url_for('booking') }}" class="btn">Get Help</a>
+        </div>
+        
+        <!-- Network Services -->
+        <div class="service-card">
+                   <div class="slide-img" style="background-image: url(../static/images/network.webp);"></div>
+            <h3>3. Network & Connectivity</h3>
+            <ul>
+                <li>Home/office WiFi setup and optimization</li>
+                <li>Network troubleshooting (LAN, WAN, routers)</li>
+                <li>Printer and peripheral setup</li>
+            </ul>
+            <a href="{{ url_for('booking') }}" class="btn">Setup Appointment</a>
+        </div>
+        
+        <!-- Accessories Sales -->
+        <div class="service-card">
+             <div class="slide-img" style="background-image: url(../static/images/accessories.jpg);"></div>
+            <h3>4. Accessories Sales</h3>
+            <ul>
+                <li>Certified phone/laptop chargers, batteries</li>
+                <li>USBs, HDMI cables, adapters</li>
+                <li>Phone cases, laptop bags, screen protectors</li>
+                <li>Refurbished devices (phones, laptops, routers)</li>
+            </ul>
+            <a href="{{ url_for('shop') }}" class="btn">Browse Shop</a>
+        </div>
+        
+        <!-- IT Consulting -->
+        <div class="service-card">
+           <div class="slide-img" style="background-image: url(../static/images/itconsultant.jpg);"></div>
+            <h3>5. IT Consulting</h3>
+            <ul>
+                <li>Tech advice for individuals and businesses</li>
+                <li>Device upgrade recommendations</li>
+                <li>Setup of remote working tools (Zoom, Google Workspace)</li>
+            </ul>
+            <a href="{{ url_for('contact') }}" class="btn">Get Advice</a>
+        </div>
+        
+        <!-- Custom Builds -->
+        <div class="service-card">
+             <div class="slide-img" style="background-image: url(../static/images/custom.jpeg);"></div>
+            <h3>6. Custom Builds</h3>
+            <ul>
+                <li>Custom PC building (gaming, office, design)</li>
+                <li>Device customization (cases, skins, keyboards)</li>
+                <li>Performance optimization</li>
+            </ul>
+            <a href="{{ url_for('booking') }}" class="btn">Get a Quote</a>
+        </div>
+        
+        <!-- Smart Home -->
+        <div class="service-card">
+            <div class="slide-img" style="background-image: url(../static/images/Smart-Home-Technology.jpg);"></div>
+            <h3>7. Smart Home</h3>
+            <ul>
+                <li>Smart camera setup (CCTV)</li>
+                <li>Smart lighting, plugs, voice assistant setup</li>
+                <li>Home automation solutions</li>
+            </ul>
+            <a href="{{ url_for('booking') }}" class="btn">Schedule Setup</a>
+        </div>
+    </div>
+</section>
+
+<!-- Warranty Section -->
+<section class="section" style="background-color: #f5f5f5;">
+    <div class="section-title">
+        <h2>Service Warranty</h2>
+        <p>We stand behind our work</p>
+    </div>
+    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <p>All our repairs come with a 90-day warranty. If you experience the same issue within this period, we'll fix it at no additional cost.</p>
+        <i class="fas fa-shield-alt" style="font-size: 3rem; color: var(--bright-teal); margin-top: 1rem;"></i>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="section">
+    <div class="section-title">
+        <h2>What Our Customers Say</h2>
+        <p>Trusted by hundreds of satisfied clients</p>
+    </div>
+    <div class="testimonials">
+        <div class="testimonial-card">
+            <p>"Fixed my water-damaged phone when others said it was impossible. Highly recommended!"</p>
+            <div class="customer">- James K., Nairobi</div>
+        </div>
+        <div class="testimonial-card">
+            <p>"Quick service and fair pricing. My laptop works like new again."</p>
+            <div class="customer">- Sarah M., Mombasa</div>
+        </div>
+        <div class="testimonial-card">
+            <p>"Recovered all my family photos from a crashed hard drive. Lifesavers!"</p>
+            <div class="customer">- David W., Nairobi</div>
+        </div>
+    </div>
+</section>
+{% endblock %}

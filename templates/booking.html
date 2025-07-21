@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}Book a Service | FixTech Solutions{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="section-title">
+        <h2>Book a Service</h2>
+        <p>Schedule your repair or consultation</p>
+    </div>
+
+    <div class="booking-steps">
+        <div class="step">
+            <div class="step-number">1</div>
+            <h3>Select Service</h3>
+        </div>
+        <div class="step">
+            <div class="step-number">2</div>
+            <h3>Choose Time</h3>
+        </div>
+        <div class="step">
+            <div class="step-number">3</div>
+            <h3>Your Details</h3>
+        </div>
+        <div class="step">
+            <div class="step-number">4</div>
+            <h3>Confirmation</h3>
+        </div>
+    </div>
+
+    <div style="max-width: 800px; margin: 0 auto; background-color: var(--white); padding: 2rem; border-radius: 8px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
+        <form method="POST" action="{{ url_for('booking') }}">
+            <div class="form-group">
+                <label for="service">Select Service</label>
+                <select id="service" name="service" required>
+                    <option value="">-- Select a service --</option>
+                    <option value="computer-repair">Computer Repair</option>
+                    <option value="laptop-repair">Laptop Repair</option>
+                    <option value="virus-removal">Virus Removal</option>
+                    <option value="data-recovery">Data Recovery</option>
+                    <option value="custom-build">Custom PC Build</option>
+                    <option value="onsite-support">On-site Support</option>
+                    <option value="other">Other (describe below)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Problem Description</label>
+                <textarea id="description" name="description" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Preferred Date</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="time">Preferred Time</label>
+                <select id="time" name="time" required>
+                    <option value="">-- Select a time --</option>
+                    <option value="morning">Morning (9AM-12PM)</option>
+                    <option value="afternoon">Afternoon (1PM-5PM)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" name="urgent" id="urgent">
+                    This is an urgent request
+                </label>
+            </div>
+
+            <button type="submit" class="btn">Book Appointment</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

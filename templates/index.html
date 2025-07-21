@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero">
+    <h1>Need a quick fix? We've got your tech covered!</h1>
+    <p>Fast, reliable, and affordable tech repair services for all your devices. Don't let tech troubles slow you down.</p>
+    <a href="{{ url_for('booking') }}" class="btn">Book a Repair Now</a>
+</section>
+
+<!-- New Services Carousel Section -->
+<section class="services-carousel">
+    <div class="section-title">
+        <h2>Our Comprehensive Services</h2>
+        <p>Everything you need to keep your tech running smoothly</p>
+    </div>
+    
+    <div class="carousel-container">
+        <div class="carousel-track">
+            <!-- Device Repairs -->
+            <div class="service-slide">
+                <div class="slide-img" style="background-image: url(../static/images/background.webp);"></div>
+                <div class="slide-content">
+                    <h3>Device Repairs</h3>
+                    <ul>
+                        <li>Smartphone repair (screen, battery, ports)</li>
+                        <li>Tablet/iPad repair</li>
+                        <li>Laptop/PC hardware & software</li>
+                        <li>Smartwatch and wearable repair</li>
+                        <li>Game console repair</li>
+                    </ul>
+                </div>
+            </div>
+             
+           <!-- Computer Services -->
+<div class="service-slide">
+    <div class="slide-img" style="background-image: url(../static/images/computer-services.jpg);"></div>
+    <div class="slide-content">
+        <h3>Computer Services</h3>
+        <ul>
+            <li>Software installation/troubleshooting</li>
+            <li>Virus and malware removal</li>
+            <li>OS installation/upgrade</li>
+            <li>Data recovery and backup</li>
+            <li>Laptop cleaning & thermal paste</li>
+        </ul>
+    </div>
+</div>
+
+            
+            <!-- Network Services -->
+            <div class="service-slide">
+                <div class="slide-img" style="background-image: url(../static/images/network.webp);"></div>
+                <div class="slide-content">
+                    <h3>Network & Connectivity</h3>
+                    <ul>
+                        <li>WiFi setup and optimization</li>
+                        <li>Network troubleshooting</li>
+                        <li>Printer and peripheral setup</li>
+                        <li>Smart home network configuration</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Accessories Sales -->
+            <div class="service-slide">
+                <div class="slide-img" style="background-image: url(../static/images/accessories.jpg);"></div>
+                <div class="slide-content">
+                    <h3>Accessories Sales</h3>
+                    <ul>
+                        <li>Certified chargers & batteries</li>
+                        <li>Cables, USBs, HDMI</li>
+                        <li>Cases, bags, screen protectors</li>
+                        <li>Refurbished devices</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- IT Consulting -->
+            <div class="service-slide">
+                <div class="slide-img" style="background-image: url(../static/images/itconsultant.jpg);"></div>
+                <div class="slide-content">
+                    <h3>IT Consulting</h3>
+                    <ul>
+                        <li>Tech advice for businesses</li>
+                        <li>Device upgrade recommendations</li>
+                        <li>Remote work tools setup</li>
+                        <li>Custom solutions</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Custom Builds -->
+            <div class="service-slide">
+                <div class="slide-img" style="background-image: url(../static/images/custom.jpeg);"></div>
+                <div class="slide-content">
+                    <h3>Custom Builds</h3>
+                    <ul>
+                        <li>Gaming PCs</li>
+                        <li>Office workstations</li>
+                        <li>Design workstations</li>
+                        <li>Device customization</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Smart Home -->
+            <div class="service-slide">
+               <div class="slide-img" style="background-image: url(../static/images/Smart-Home-Technology.jpg);"></div>
+                <div class="slide-content">
+                    <h3>Smart Home Integration</h3>
+                    <ul>
+                        <li>Smart camera setup</li>
+                        <li>Smart lighting & plugs</li>
+                        <li>Voice assistant setup</li>
+                        <li>Home automation</li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div class="carousel-nav">
+        <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+</section>
+
+<!-- Existing Trust Badges Section -->
+<section class="trust-badges">
+    <div class="section-title">
+        <h2>Why Choose FixTech?</h2>
+        <p>We're committed to excellence in every service</p>
+    </div>
+    <div class="badges">
+        <div class="badge">
+            <i class="fas fa-certificate"></i>
+            <span>Certified Technicians</span>
+            <p>Our experts are certified and highly trained</p>
+        </div>
+        <div class="badge">
+            <i class="fas fa-bolt"></i>
+            <span>Fast Service</span>
+            <p>Most repairs completed within 24 hours</p>
+        </div>
+        <div class="badge">
+            <i class="fas fa-tag"></i>
+            <span>Affordable Pricing</span>
+            <p>Competitive prices with no hidden fees</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

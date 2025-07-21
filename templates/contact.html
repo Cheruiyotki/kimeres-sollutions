@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us | FixTech Solutions{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="section-title">
+        <h2>Contact Us</h2>
+        <p>We're here to help with all your tech needs</p>
+    </div>
+
+    <div class="contact-container">
+        <div class="contact-info">
+            <h3>Get in Touch</h3>
+            <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+            <p><i class="fas fa-envelope"></i> info@fixtech.com</p>
+            <p><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Digital City, DC 12345</p>
+            
+            <h3 style="margin-top: 2rem;">Working Hours</h3>
+            <p><i class="fas fa-clock"></i> Monday-Friday: 9:00 AM - 6:00 PM</p>
+            <p><i class="fas fa-clock"></i> Saturday: 10:00 AM - 4:00 PM</p>
+            <p><i class="fas fa-clock"></i> Sunday: Closed</p>
+            
+            <div style="margin-top: 2rem;">
+                <a href="#" class="btn" style="display: inline-flex; align-items: center;">
+                    <i class="fab fa-whatsapp" style="margin-right: 0.5rem;"></i> Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h3>Send Us a Message</h3>
+            <form method="POST" action="{{ url_for('contact') }}">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject">
+                        <option value="general">General Inquiry</option>
+                        <option value="repair">Repair Question</option>
+                        <option value="product">Product Question</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="padding-top: 0;">
+    <div style="height: 400px; background-color: #eee; border-radius: 8px; overflow: hidden;">
+        <!-- Google Maps Embed -->
+       <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.808477395213!2d36.82121431475399!3d-1.288385835980925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10d664d22f6f%3A0x9e5e3b6a6a8f0b0!2sPlessey%20House%2C%20Uhuru%20Hwy%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1620000000000!5m2!1sen!2ske" 
+  width="100%" 
+  height="400" 
+  style="border:0;" 
+  allowfullscreen="" 
+  loading="lazy">
+</iframe>
+    </div>
+</section>
+{% endblock %}

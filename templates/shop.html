@@ -1,0 +1,201 @@
+{% extends "base.html" %}
+
+{% block title %}Shop | FixTech Solutions{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="section-title">
+        <h2>Tech Accessories Shop</h2>
+        <p>Quality products at competitive prices</p>
+    </div>
+
+    <!-- Search and Filter Section -->
+    <div class="shop-controls">
+        <div class="search-bar">
+            <input type="text" id="product-search" placeholder="Search products...">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+        
+        <div class="filter-section">
+            <div class="filter-group">
+                <label for="category-filter">Category:</label>
+                <select id="category-filter">
+                    <option value="all">All Categories</option>
+                    <option value="phone-accessories">Phone Accessories</option>
+                    <option value="laptop-accessories">Laptop Accessories</option>
+                    <option value="networking">Networking Devices</option>
+                    <option value="smart-devices">Smart Devices</option>
+                    <option value="refurbished">Refurbished Devices</option>
+                    <option value="components">Computer Components</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="price-filter">Price Range:</label>
+                <select id="price-filter">
+                    <option value="all">All Prices</option>
+                    <option value="0-50">Under $50</option>
+                    <option value="50-100">$50 - $100</option>
+                    <option value="100-200">$100 - $200</option>
+                    <option value="200">$200+</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="sort-by">Sort By:</label>
+                <select id="sort-by">
+                    <option value="popularity">Popularity</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="newest">Newest Arrivals</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="availability">Availability:</label>
+                <select id="availability">
+                    <option value="all">All Items</option>
+                    <option value="in-stock">In Stock Only</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="products-grid">
+        <!-- Phone Accessories -->
+        <div class="product-card" data-category="phone-accessories" data-price="29.99" data-stock="true" data-popularity="3">
+            <div class="product-img" style="background-image: url('{{ url_for('static', filename='images/phone-case.jpg') }}');"></div>
+            <div class="product-info">
+                <div class="product-badge in-stock">In Stock</div>
+                <h3>Premium Phone Case</h3>
+                <div class="price">$29.99</div>
+                <p>Shockproof case with screen protector included</p>
+                <div class="product-actions">
+                    <button class="btn add-to-cart">Add to Cart</button>
+                    <button class="btn-outline quick-view">Quick View</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-card" data-category="phone-accessories" data-price="19.99" data-stock="true" data-popularity="4">
+            <div class="product-img" style="background-image: url('{{ url_for('static', filename='images/power-bank.jpg') }}');"></div>
+            <div class="product-info">
+                <div class="product-badge in-stock">In Stock</div>
+                <h3>10,000mAh Power Bank</h3>
+                <div class="price">$19.99</div>
+                <p>Fast charging portable battery</p>
+                <div class="product-actions">
+                    <button class="btn add-to-cart">Add to Cart</button>
+                    <button class="btn-outline quick-view">Quick View</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Laptop Accessories -->
+        <div class="product-card" data-category="laptop-accessories" data-price="89.99" data-stock="true" data-popularity="2">
+            <div class="product-img" style="background-image: url('{{ url_for('static', filename='images/laptop-bag.jpg') }}');"></div>
+            <div class="product-info">
+                <div class="product-badge in-stock">In Stock</div>
+                <h3>Professional Laptop Bag</h3>
+                <div class="price">$89.99</div>
+                <p>Water-resistant with multiple compartments</p>
+                <div class="product-actions">
+                    <button class="btn add-to-cart">Add to Cart</button>
+                    <button class="btn-outline quick-view">Quick View</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-card" data-category="laptop-accessories" data-price="39.99" data-stock="false" data-popularity="1">
+            <div class="product-img" style="background-image: url('{{ url_for('static', filename='images/cooling-pad.jpg') }}');"></div>
+            <div class="product-info">
+                <div class="product-badge out-of-stock">Out of Stock</div>
+                <h3>Laptop Cooling Pad</h3>
+                <div class="price">$39.99</div>
+                <p>Adjustable fans with LED lighting</p>
+                <div class="product-actions">
+                    <button class="btn add-to-cart" disabled>Add to Cart</button>
+                    <button class="btn-outline quick-view">Quick View</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Networking Devices -->
+        <div class="product-card" data-category="networking" data-price="129.99" data-stock="true" data-popularity="3">
+            <div class="product-img" style="background-image: url('{{ url_for('static', filename='images/wifi-router.jpg') }}');"></div>
+            <div class="product-info">
+                <div class="product-badge in-stock">In Stock</div>
+                <h3>Wi-Fi 6 Router</h3>
+                <div class="price">$129.99</div>
+                <p>Dual-band with extended coverage</p>
+                <div class="product-actions">
+                    <button class="btn add-to-cart">Add to Cart</button>
+                    <button class="btn-outline quick-view">Quick View</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Smart Devices -->
+        <div class="product-card" data-category="smart-devices" data-price="149.99" data-stock="true" data-popularity="5">
+            <div class="product-img" style="background-image: url('{{ url_for('static', filename='images/smart-watch.jpg') }}');"></div>
+            <div class="product-info">
+                <div class="product-badge in-stock">In Stock</div>
+                <h3>Smart Watch Pro</h3>
+                <div class="price">$149.99</div>
+                <p>Fitness tracking & notifications</p>
+                <div class="product-actions">
+                    <button class="btn add-to-cart">Add to Cart</button>
+                    <button class="btn-outline quick-view">Quick View</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Refurbished Devices -->
+        <div class="product-card" data-category="refurbished" data-price="299.99" data-stock="true" data-popularity="4">
+            <div class="product-img" style="background-image: url('{{ url_for('static', filename='images/refurb-laptop.jpg') }}');"></div>
+            <div class="product-info">
+                <div class="product-badge in-stock">In Stock</div>
+                <h3>Refurbished Laptop</h3>
+                <div class="price">$299.99 <span class="original-price">$499.99</span></div>
+                <p>1-year warranty included</p>
+                <div class="product-actions">
+                    <button class="btn add-to-cart">Add to Cart</button>
+                    <button class="btn-outline quick-view">Quick View</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Computer Components -->
+        <div class="product-card" data-category="components" data-price="79.99" data-stock="true" data-popularity="3">
+            <div class="product-img" style="background-image: url('{{ url_for('static', filename='images/ssd.jpg') }}');"></div>
+            <div class="product-info">
+                <div class="product-badge in-stock">In Stock</div>
+                <h3>1TB NVMe SSD</h3>
+                <div class="price">$79.99</div>
+                <p>High-speed storage upgrade</p>
+                <div class="product-actions">
+                    <button class="btn add-to-cart">Add to Cart</button>
+                    <button class="btn-outline quick-view">Quick View</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be added here dynamically -->
+        </div>
+        <div class="cart-total">
+            <p>Total: <span>$0.00</span></p>
+            <button class="btn checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+    <div class="cart-overlay"></div>
+</section>
+{% endblock %}
