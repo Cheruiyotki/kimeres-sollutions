@@ -80,5 +80,5 @@ def booking():
 def booking_success():
     return render_template('booking.html', success=True)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True)
